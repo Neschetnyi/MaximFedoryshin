@@ -1,0 +1,39 @@
+@reference "tailwindcss";
+
+.navigation {
+  @apply w-full z-20 bg-white/30 backdrop-blur-md h-1/20 sticky top-0 flex justify-center items-center 
+                transition duration-300 delay-1600 ease-out;
+}
+
+.navigationNotVisible {
+  @apply translate-y-50 opacity-0;
+}
+
+.aboutMe {
+  @apply transition duration-300 delay-2000 ease-out;
+}
+
+.services {
+  @apply transition duration-300 delay-2400 ease-out;
+}
+
+.aboutTFP {
+  @apply transition duration-300 delay-2600 ease-out;
+}
+
+.publications {
+  @apply transition duration-300 delay-2800 ease-out;
+}
+
+.signToServices {
+  @apply -rotate-6 -translate-y-10 transition-transform duration-500 ease-out;
+}
+
+.signToServicesSpan {
+  @apply font-['Miamanueva'] text-4xl text-green-50 text-shadow-lg text-shadow-green-950 
+                    transition duration-300 ease-out delay-3000;
+}
+
+.stuck {
+  @apply translate-y-1 rotate-0;
+}

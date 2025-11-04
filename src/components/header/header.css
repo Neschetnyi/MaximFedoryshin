@@ -1,0 +1,51 @@
+@reference "tailwindcss";
+
+.header {
+  @apply w-full h-[calc(100lvh-4vh)]   flex flex-col justify-between overflow-hidden;
+}
+.headerWrapper {
+  @apply flex flex-col pt-36;
+}
+
+/*animations*/
+.cabinet {
+  @apply text-6xl text-green-50 self-start ml-40 transition duration-800 delay-300 ease-out;
+}
+.cabinetNotVisible {
+  @apply -translate-y-full opacity-0;
+}
+
+.nameBorderWrapper {
+  @apply border-2 border-amber-200 w-10/12 
+                font-['Engry',serif] text-7xl text-shadow-lg text-shadow-green-950  text-green-50 self-center  
+                p-4 flex flex-col
+                transition duration-800 delay-600 ease-out;
+}
+
+.nameBorderWrapperNotVisible {
+  @apply opacity-0;
+}
+
+.name {
+  @apply self-start ml-3 transition duration-800 delay-900 ease-out;
+}
+
+.nameNotVisible {
+  @apply -translate-x-full opacity-0;
+}
+
+.surname {
+  @apply self-end transition duration-900 delay-1200 ease-out;
+}
+
+.surnameNotVisible {
+  @apply translate-x-full opacity-0;
+}
+
+.profession {
+  @apply text-[2rem] text-green-50 self-end mr-30 transition duration-900 delay-1400 ease-out;
+}
+
+.professionNotVisible {
+  @apply translate-y-full opacity-0;
+}
