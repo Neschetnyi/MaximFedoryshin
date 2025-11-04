@@ -26,8 +26,8 @@ const Header = ({
         console.log(animationGoing, "isAnimating after animation");
       }, 3000);
     }, 100);
-
-    const handleScrollAttempt = (event: WheelEvent | TouchEvent) => {
+    //event: WheelEvent | TouchEvent
+    const handleScrollAttempt = () => {
       if (animationGoing.current) {
         console.log("handleScrollAttempt");
 
