@@ -1,3 +1,5 @@
+//сверху шапкой "Это личное, никакого бизнеса"
+
 import { useEffect } from "react";
 import "./header.css";
 
@@ -15,57 +17,48 @@ const Header = ({
   isVisible,
 }: HeaderProps) => {
   useEffect(() => {
-    // плавная стартовая анимация
+    // задержка для плавного старта анимации
     setTimeout(() => {
       setIsVisible(true);
 
+      console.log(animationGoing, "isAnimating before animation");
       setTimeout(() => {
         animationGoing.current = false;
         firstTimeAnimation.current = true;
-      }, 4000);
-    }, 200);
-
-    const handleScrollAttempt = (event: WheelEvent | TouchEvent) => {
-      // читаем значения ref прямо в момент события!
+        console.log(animationGoing, "isAnimating after animation");
+      }, 3000);
+    }, 100);
+    //event: WheelEvent | TouchEvent
+    const handleScrollAttempt = () => {
       if (animationGoing.current) {
-        event.preventDefault();
-        event.stopPropagation();
-        console.log("⛔ Блокируем скролл во время анимации");
-        return;
+        console.log("handleScrollAttempt");
+
+        // если идёт анимация — запрещаем скролл
+        // event.preventDefault();
+        // event.stopPropagation();
       }
-
       if (firstTimeAnimation.current) {
-        event.preventDefault();
-        event.stopPropagation();
         setIsVisible(false);
-        console.log("🎬 Запускаем анимацию скрытия Header");
-        firstTimeAnimation.current = false;
-
-        // после завершения анимации можно позволить скролл
+        // event.preventDefault();
+        // event.stopPropagation();
+        console.log("handleScrollAttempt after firstTimeAnimation");
         setTimeout(() => {
-          animationGoing.current = false;
-        }, 2000);
+          firstTimeAnimation.current = false;
+        }, 500);
       }
     };
 
-    // обязательно { passive: false } чтобы работал preventDefault
     window.addEventListener("wheel", handleScrollAttempt, { passive: false });
-    window.addEventListener("touchmove", handleScrollAttempt, {
-      passive: false,
-    });
-
     return () => {
       window.removeEventListener("wheel", handleScrollAttempt);
-      window.removeEventListener("touchmove", handleScrollAttempt);
     };
-  }, []); // эффект всё ещё вызывается один раз
-  // но работает стабильно, потому что читаем ref динамически
+  }, [animationGoing]);
 
   return (
     <header className="header">
-      <div className="headerWrapper">
+      <div className="headerWrapper ">
         <div className={`cabinet ${!isVisible && "cabinetNotVisible"}`}>
-          кабинет
+          Это личное, никакого бизнеса
         </div>
         <div
           className={`nameBorderWrapper ${
@@ -73,14 +66,20 @@ const Header = ({
           }`}
         >
           <span className={`name ${!isVisible && "nameNotVisible"}`}>
-            Максима
+            Максим
           </span>
           <span className={`surname ${!isVisible && "surnameNotVisible"}`}>
-            Федорышина
+            Федорышин
           </span>
         </div>
         <div className={`profession ${!isVisible && "professionNotVisible"}`}>
-          дипломированного психолога - психотерапевта
+          <strong className="text-2xl">
+            <ul>
+              <li> Врач-психиатр </li>
+              <li> Психотерапевт</li>
+              <li> Психолог-психоаналитик</li>
+            </ul>
+          </strong>{" "}
         </div>
       </div>
     </header>

@@ -17,7 +17,7 @@
 
 .nameBorderWrapper {
   @apply border-2 border-amber-200 w-10/12 
-                font-['Engry',serif] text-7xl text-shadow-lg text-shadow-green-950  text-green-50 self-center  
+                font-['Engry',serif] text-8xl text-shadow-lg text-shadow-green-950  text-green-50 self-center  
                 p-4 flex flex-col
                 transition duration-800 delay-600 ease-out;
 }

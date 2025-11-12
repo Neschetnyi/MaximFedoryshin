@@ -1,1 +1,9 @@
 @reference "tailwindcss";
+
+.transitionAll {
+  @apply transition-all ease-out;
+}
+
+.notVisibleText {
+  @apply opacity-0;
+}

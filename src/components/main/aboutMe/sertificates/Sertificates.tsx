@@ -1,33 +1,45 @@
-import proreEducation from "../../../../assets/sertificates/vuz_48335_f7f36c.jpg";
-import education from "../../../../assets/sertificates/vuz_48336_5b2a56.jpg";
-import yungianEducation from "../../../../assets/sertificates/vuz_48338_80027a.jpg";
-import nlpEducation from "../../../../assets/sertificates/vuz_sert_89583.jpg";
+import { certificates } from "./sertificatesData";
+import ModalWindow from "../../../../shared/components/ModalWindow/ModalWindow";
+import { useModal } from "../../../../shared/components/ModalWindow/useModal";
+import Slider from "../../../../shared/components/Slider/Slider";
 
 const Sertificates = () => {
+  const { modalData, isVisible, openModal, closeModal } = useModal();
+
   return (
-    <section className="w-full  pt-20 flex justify-center  h-[30vh]">
-      <figure className="flex justify-center ">
-        <img
-          className="h-full   mr-2 ml-2 rounded-2xl border-4 border-yellow-950/30"
-          src={proreEducation}
-          alt=""
-        />
-        <img
-          className="h-full  mr-2 ml-2 rounded-2xl border-4 border-yellow-950/30"
-          src={education}
-          alt=""
-        />
-        <img
-          className="h-full   mr-2 ml-2 rounded-2xl border-4 border-yellow-950/30"
-          src={yungianEducation}
-          alt=""
-        />
-        <img
-          className="h-full  mr-2 ml-2 rounded-2xl border-4 border-yellow-950/30"
-          src={nlpEducation}
-          alt=""
-        />
-      </figure>
+    <section
+      aria-labelledby="certificates-title"
+      className="w-full pt-20 flex flex-col items-center"
+    >
+      <h2 id="certificates-title" className="sr-only">
+        Сертификаты и дипломы психолога Максима Федорышина
+      </h2>
+
+      <Slider>
+        {certificates.map((cert, index) => (
+          <figure
+            key={index}
+            className="cursor-pointer shrink-0 w-[250px] h-[180px] overflow-hidden rounded-xl transition-transform duration-300 ease-in-out hover:scale-105"
+            onClick={() => openModal(cert.src)}
+          >
+            <img
+              src={cert.src}
+              alt={cert.alt}
+              className="w-full h-full object-cover"
+            />
+          </figure>
+        ))}
+      </Slider>
+
+      <ModalWindow isVisible={isVisible} closeModal={closeModal}>
+        {modalData && (
+          <img
+            src={modalData}
+            alt="Сертификат"
+            className="object-contain max-w-full max-h-[90vh] rounded-lg shadow-2xl"
+          />
+        )}
+      </ModalWindow>
     </section>
   );
 };
