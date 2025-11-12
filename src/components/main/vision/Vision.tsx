@@ -97,7 +97,7 @@ const Vision = () => {
           top: document.body.scrollHeight, // 👈 прокрутка в самый низ страницы
           behavior: "smooth", // плавно
         });
-        observer.unobserve(entry.target);
+        setTimeout(() => observer.unobserve(entry.target), 1000);
       }
     });
 
