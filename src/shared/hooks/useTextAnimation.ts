@@ -14,7 +14,6 @@ export const useTextAnimation = ({
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log("timer is", timer.current);
           setTimeout(() => {
             entry.target.classList.remove(`${classNameParam}`);
             observer.unobserve(entry.target);

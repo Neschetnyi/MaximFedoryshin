@@ -1,14 +1,18 @@
+import { useMemo } from "react";
 import { useIntersectionAnimation } from "../../../shared/hooks/useIntersectionAnimation";
+import type { refsType } from "../../../App";
 
-const TFP = () => {
+const TFP = ({ teraphy }: { teraphy: refsType["teraphy"] }) => {
   const videoRef = useIntersectionAnimation<HTMLParagraphElement>();
-  const myVision = useIntersectionAnimation<HTMLAnchorElement>({ delay: 300 });
+  const delayed = useMemo(() => ({ delay: 300 }), []);
+  const myVision = useIntersectionAnimation<HTMLAnchorElement>(delayed);
 
   return (
     <section
       id="TFP"
+      ref={teraphy}
       aria-label="Kernberg video interview about TFP"
-      className=" w-2/3 p-10  mb-40 bg-amber-100/80 overflow-hidden border-yellow-950/50 border-b-8 border-t-8  flex flex-col items-center"
+      className=" w-[60lvw] mb-[20lvh] p-10 bg-amber-100/80 overflow-hidden border-yellow-950/50 border-b-8 border-t-8  flex flex-col items-center"
     >
       <div className="w-full flex flex-col items-center overflow-hidden">
         <h3
@@ -28,7 +32,7 @@ const TFP = () => {
           src="https://player.vimeo.com/video/645996054?h=df9096ba3d"
           width="640"
           height="360"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; "
         ></iframe>
         <p ref={videoRef.ref} className="video-source">
           Источник видео:{" "}

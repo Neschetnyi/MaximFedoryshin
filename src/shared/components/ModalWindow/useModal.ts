@@ -5,7 +5,7 @@ export const useModal = <T = string>() => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (isVisible && window.innerWidth > 1024) {
+    if (isVisible) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";

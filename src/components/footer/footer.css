@@ -1,0 +1,46 @@
+@reference "tailwindcss";
+
+.footer {
+  @apply lg:w-[80lvw]
+  w-[100lvw] h-[20lvh] text-amber-50 flex justify-center bg-[rgba(53,57,43,1)];
+}
+
+.footerSection {
+  @apply p-5;
+}
+
+.sectionInnerWrapper {
+  @apply flex flex-col items-center;
+}
+
+.figure {
+  @apply absolute bottom-[20lvh];
+}
+
+.footerImg {
+  @apply w-[90lvw] h-auto
+  md:w-[70lvw]
+  lg:w-[55lvw];
+}
+
+.footerHeadding {
+  @apply text-lg font-['Engry',serif] font-bold text-green-50 mb-3
+  md:text-xl;
+}
+
+.footerAddress {
+  @apply not-italic flex justify-around gap-4;
+}
+
+.footerButtonHover {
+  @apply transition-transform duration-300 hover:scale-110 origin-center;
+}
+
+.footerButtonImg {
+  @apply h-[7lvh]
+  lg:h-[8lvh];
+}
+
+.workStyle {
+  @apply text-sm mt-3 text-center pb-3;
+}

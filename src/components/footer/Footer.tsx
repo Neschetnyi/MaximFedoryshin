@@ -1,10 +1,13 @@
 import { useEffect, useRef } from "react";
 
+import "./footer.css";
+
 import telephonelogo from "../../assets/icons/phone-svgrepo-com.svg";
 import telegramlogo from "../../assets/icons/telegram-svgrepo-com.svg";
 import whatsapplogo from "../../assets/icons/whatsapp-svgrepo-com.svg";
 import vklogo from "../../assets/icons/VK_Compact_Logo_(2021-present).svg";
-import maxlogo from "../../assets/icons/max-messenger-sign-logo.svg"; // если есть свой логотип
+import maxlogo from "../../assets/icons/max-messenger-sign-logo.svg";
+import openHands from "../../assets/maxFoto/openHands.png";
 
 const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
   const footerRef = useRef<HTMLDivElement | null>(null);
@@ -29,24 +32,26 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
   }, [setBgOffset]);
 
   return (
-    <footer
-      ref={footerRef}
-      className="w-full text-amber-50 flex justify-center bg-[rgba(53,57,43,1)]"
-    >
-      <section aria-label="Контактная информация" className="py-5 px-5">
-        <div className="flex flex-col items-center">
-          <h3 className="text-xl font-['Engry',serif] font-bold text-green-50 mb-3">
-            Контакты
-          </h3>
+    <footer ref={footerRef} className="footer">
+      <section aria-label="Контактная информация" className="footerSection">
+        <div className="sectionInnerWrapper">
+          <figure className="figure">
+            <img src={openHands} className="footerImg" alt="обьятья" />
+          </figure>
+          <h3 className="footerHeadding">Контакты</h3>
 
-          <address className="not-italic flex justify-around gap-4">
+          <address className="footerAddress">
             {/* Телефон */}
             <a
               href="tel:+79097312044"
               aria-label="Позвонить по номеру +7 909 731-20-44"
-              className="transition-transform duration-300 hover:scale-110 origin-center"
+              className="footerButtonHover"
             >
-              <img src={telephonelogo} alt="Телефон" className="w-16" />
+              <img
+                src={telephonelogo}
+                alt="Телефон"
+                className="footerButtonImg"
+              />
             </a>
 
             {/* Telegram */}
@@ -55,9 +60,13 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Написать в Telegram"
-              className="transition-transform duration-300 hover:scale-110 origin-center"
+              className="footerButtonHover"
             >
-              <img src={telegramlogo} alt="Telegram" className="w-16" />
+              <img
+                src={telegramlogo}
+                alt="Telegram"
+                className="footerButtonImg"
+              />
             </a>
 
             {/* WhatsApp */}
@@ -66,9 +75,13 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Написать в WhatsApp"
-              className="transition-transform duration-300 hover:scale-110 origin-center"
+              className="footerButtonHover"
             >
-              <img src={whatsapplogo} alt="WhatsApp" className="w-16" />
+              <img
+                src={whatsapplogo}
+                alt="WhatsApp"
+                className="footerButtonImg"
+              />
             </a>
 
             {/* VK */}
@@ -77,9 +90,9 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Перейти в VK"
-              className="transition-transform duration-300 hover:scale-110 origin-center"
+              className="footerButtonHover"
             >
-              <img src={vklogo} alt="VK" className="w-16" />
+              <img src={vklogo} alt="VK" className="footerButtonImg" />
             </a>
 
             {/* Max (ссылка на сайт или портфолио) */}
@@ -88,13 +101,13 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Перейти на сайт Maх"
-              className="transition-transform duration-300 hover:scale-110 origin-center"
+              className="footerButtonHover"
             >
-              <img src={maxlogo} alt="Max" className="w-16" />
+              <img src={maxlogo} alt="Max" className="footerButtonImg" />
             </a>
           </address>
 
-          <p className="text-sm mt-3 text-center">
+          <p className="workStyle">
             * На данный момент работаю только в онлайн-формате
           </p>
         </div>

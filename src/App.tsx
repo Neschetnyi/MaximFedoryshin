@@ -7,36 +7,58 @@ import "./App.css";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
-import Navigation from "./components/Navigation/Navigation";
 import bgImage from "./assets/clipart/e290b7edb6ff11f0b0d3567ecdaf0a75_1.jpeg";
 
-import { useState } from "react";
-import Separator from "./components/main/ separator/Separator";
+import { useRef, useState } from "react";
+import Separator from "./components/main/separator/Separator";
+// import MobileNavigation from "./components/MobileNavigation/MobileNavigation";
+import Navigation from "./components/Navigation/Navigation";
+import MobileNavigation from "./components/MobileNavigation/MobileNavigation";
+
+export type refsType = {
+  aboutMe: React.RefObject<HTMLDivElement | null>;
+  services: React.RefObject<HTMLDivElement | null>;
+  teraphy: React.RefObject<HTMLDivElement | null>;
+  publications: React.RefObject<HTMLDivElement | null>;
+};
 
 const App = () => {
   // 🟢 добавлено: эффект сдвига фона при появлении футера
   const [bgOffset, setBgOffset] = useState(0);
 
+  const aboutMe = useRef<HTMLDivElement | null>(null);
+  const services = useRef<HTMLDivElement | null>(null);
+  const teraphy = useRef<HTMLDivElement | null>(null);
+  const publications = useRef<HTMLDivElement | null>(null);
+
+  const refs = {
+    aboutMe,
+    services,
+    teraphy,
+    publications,
+  };
+
   return (
-    <div className="w-full flex flex-col justify-center items-center relative border-0 m-0 p-0">
+    <div className="appWrapper">
       {/* 🔹 Фон фиксированный, но сдвигается через backgroundPositionY */}
       <div
-        className="flex flex-col  w-10/12 border-0 m-0 p-0 bg-fixed bg-cover bg-center  transition-all duration-400 ease-out"
+        className="contentWrapper"
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundPositionY: `-${bgOffset}px`,
         }}
       >
         <Header />
-        <Navigation />
-        <Separator />
-        <Main />
-      </div>
 
-      {/* 🔹 футер с ref для наблюдения */}
-      <div className="w-10/12">
+        <Navigation refs={refs} />
+        <MobileNavigation refs={refs} />
         <Separator />
-        <Footer setBgOffset={setBgOffset} />
+        <Main refs={refs} />
+        {/* 🔹 футер с ref для наблюдения */}
+        <div className="footerWrapper">
+          <Separator />
+          <Footer setBgOffset={setBgOffset} />
+        </div>
       </div>
     </div>
   );

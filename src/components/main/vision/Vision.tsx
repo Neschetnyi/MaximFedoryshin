@@ -5,6 +5,7 @@ const Vision = () => {
   const scrollToFooter = useRef(null);
 
   useEffect(() => {
+    console.log("Vision render");
     const fullText = `Это личное* никакого бизнеса * Я Вас жду * Не стесняйтесь написать мне`;
 
     const chunks = fullText
@@ -106,7 +107,10 @@ const Vision = () => {
   }, []);
 
   return (
-    <section ref={scrollToFooter} className="h-[70lvh] flex  p-6 pt-30 w-full ">
+    <section
+      ref={scrollToFooter}
+      className="h-[70lvh] flex  p-6  mb-[8lvh] w-full "
+    >
       <div className="w-2/10"></div>
       <div className="w-6/10 flex items-baseline justify-center">
         <p

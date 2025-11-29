@@ -1,0 +1,15 @@
+@reference "tailwindcss";
+
+/* ВАЖНО ✨ правильный offset под sticky h=5lvh */
+section {
+  scroll-margin-top: 6lvh;
+}
+
+/* отключение анимаций */
+.no-transform-transition {
+  transition: none !important;
+}
+
+.listEl {
+  @apply border-5 border-r-0 border-l-0 border-emerald-50/20 border-solid  p-4 flex flex-col justify-center items-center;
+}

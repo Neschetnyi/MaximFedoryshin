@@ -5,13 +5,14 @@ import { useModal } from "../../../shared/components/ModalWindow/useModal";
 import Slider from "../../../shared/components/Slider/Slider";
 import { type publicationType } from "./publicationsTypes";
 
-const Publications = () => {
+const Publications = ({ publications }) => {
   const { modalData, isVisible, openModal, closeModal } =
     useModal<publicationType>();
 
   return (
     <section
       id="publications"
+      ref={publications}
       aria-labelledby="publications"
       className="w-full pt-20 flex flex-col items-center mb-20 h-lvh"
     >

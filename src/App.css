@@ -34,13 +34,38 @@
   font-display: swap;
 }
 
+@theme {
+  --font-old: "Old Standard TT", serif;
+  --font-miamanueva: "Miamanueva", serif;
+  --font-engry: "Engry", serif;
+  --breakpoint-mdlg: 64rem;
+  --breakpoint-xllg: 89rem;
+}
+
 @layer base {
   :root {
-    --font-old: "Old Standard TT", serif;
     --nav-height: 80px;
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5lvh;
+  }
   body {
     font-family: var(--font-old);
   }
+}
+
+.appWrapper {
+  @apply w-full flex flex-col justify-center items-center relative border-0 m-0 p-0;
+}
+
+.contentWrapper {
+  @apply flex flex-col  w-[100lvw]  border-0 m-0 p-0 bg-fixed bg-cover bg-center  transition-all duration-400 ease-out
+  lg:w-[80lvw];
+}
+
+.footerWrapper {
+  @apply w-[100lvw]
+  lg:w-[80lvw];
 }

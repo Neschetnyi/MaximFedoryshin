@@ -1,6 +1,7 @@
 //сверху шапкой "Это личное, никакого бизнеса"
 
 import { useEffect, useState } from "react";
+// import "./header.css";
 import "./header.css";
 
 const Header = () => {
@@ -14,14 +15,14 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="header">
-      <div className="headerWrapper ">
-        <div className={`cabinet ${!isVisible && "cabinetNotVisible"}`}>
+    <header className={`header`}>
+      <div className={`headerWrapper`}>
+        <div className={`slogan ${!isVisible && "sloganNotVisible"}`}>
           Это личное, никакого бизнеса
         </div>
         <div
           className={`nameBorderWrapper ${
-            !isVisible && " nameBorderWrapperNotVisible"
+            !isVisible && "nameBorderWrapperNotVisible"
           }`}
         >
           <span className={`name ${!isVisible && "nameNotVisible"}`}>
@@ -32,7 +33,7 @@ const Header = () => {
           </span>
         </div>
         <div className={`profession ${!isVisible && "professionNotVisible"}`}>
-          <strong className="text-2xl">
+          <strong className={`strong`}>
             <ul>
               <li> Врач-психиатр </li>
               <li> Психотерапевт</li>

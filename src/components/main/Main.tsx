@@ -7,15 +7,18 @@ import Sertificates from "./aboutMe/sertificates/Sertificates";
 
 import TFP from "./TFP/TFP";
 import Publications from "../main/publications/Publications";
+import { type refsType } from "../../App";
 
-const Main = () => {
+const Main = ({ refs }: { refs: refsType }) => {
+  console.log("Main refs =", refs);
+  const { aboutMe, services, teraphy, publications } = refs;
   return (
     <main className="min-h-lvh flex flex-col items-center">
-      <AboutMe />
+      <AboutMe aboutMe={aboutMe} />
       <Sertificates />
-      <Services />
-      <TFP />
-      <Publications />
+      <Services services={services} />
+      <TFP teraphy={teraphy} />
+      <Publications publications={publications} />
       <Vision />
     </main>
   );
