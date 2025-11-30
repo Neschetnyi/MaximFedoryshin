@@ -19,7 +19,10 @@ const Slider = ({ children }: SliderProps) => {
   useStopWheelHScroll(scrollRef, 4);
 
   return (
-    <div className={`flex justify-between items-stretch `} ref={sliderRef.ref}>
+    <div
+      className={`flex justify-between items-stretch max-w-[calc(100lvw-20px)]`}
+      ref={sliderRef.ref}
+    >
       <button
         onClick={() => scroll("left")}
         onMouseEnter={stopAutoScroll}
