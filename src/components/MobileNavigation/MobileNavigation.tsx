@@ -8,7 +8,7 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
   const mobileSentinelRef = useRef<HTMLDivElement | null>(null);
   const scrollYref = useRef<number>(0);
 
-  const [isVisibleMobile, setIsVisibleMobile] = useState(true); // закрыто = 5lvh
+  const [isVisibleMobile, setIsVisibleMobile] = useState(true); // закрыто = 42px
   const [isStuck, setIsStuck] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
   const [noAnim, setNoAnim] = useState(false); // отключает transform-анимации
@@ -96,13 +96,6 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
   };
 
   // ---- Navigation classes -------------------------------------------------
-  const navClass = !isStuck
-    ? isVisibleMobile
-      ? "absolute top-[calc(100lvh-5lvh)] h-[5lvh]"
-      : "absolute top-[calc(100lvh-5lvh)] h-lvh -translate-y-[calc(100lvh-5lvh)]"
-    : isVisibleMobile
-    ? "sticky top-0 h-[5lvh]"
-    : "sticky top-0 h-lvh";
 
   const navStyle =
     isScroll && !isStuck
@@ -115,7 +108,7 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
 
       <nav
         style={navStyle}
-        className={`lg:hidden
+        className={`lg:hidden 
           w-[100lvw] z-20 bg-white/30 backdrop-blur-md
           flex flex-col items-center
           
@@ -124,14 +117,22 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
               ? "no-transform-transition"
               : "transition-all duration-500 ease-out"
           }
-          ${navClass}
+          ${
+            !isStuck
+              ? isVisibleMobile
+                ? "absolute top-[calc(100dvh-42px)] h-[42px]"
+                : "absolute top-[calc(100dvh-42px)] h-dvh -translate-y-[calc(100dvh-42px)]"
+              : isVisibleMobile
+              ? "sticky top-0 h-[42px]"
+              : "sticky top-0 h-dvh"
+          }
         `}
       >
         {/* Верхняя кнопка до sticky */}
         <button
           onClick={toggleMenu}
           className={`mobileButton1
-            w-full h-[5lvh] flex justify-center items-center
+            w-full h-[42px] flex justify-center items-center
             bg-white/30 backdrop-blur-md
             font-['Miamanueva'] text-5xl text-green-50 text-shadow-2xs text-shadow-black
             ${isStuck ? "hidden" : ""}
@@ -208,7 +209,7 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
         <button
           onClick={toggleMenu}
           className={` mobileButton2
-            w-full h-[5lvh] flex justify-center items-center mt-auto
+            w-full h-[42px] flex justify-center items-center mt-auto
             bg-white/30 backdrop-blur-md
             font-['Miamanueva'] text-5xl text-green-50 text-shadow-2xs text-shadow-black
             ${isStuck ? "" : "hidden"}
