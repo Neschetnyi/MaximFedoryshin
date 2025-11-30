@@ -1,8 +1,8 @@
 @reference "tailwindcss";
 
-/* ВАЖНО ✨ правильный offset под sticky h=5lvh */
+/* ВАЖНО ✨ правильный offset под sticky h=42px */
 section {
-  scroll-margin-top: 6lvh;
+  scroll-margin-top: 42px;
 }
 
 /* отключение анимаций */
