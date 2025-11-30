@@ -20,7 +20,7 @@ const Slider = ({ children }: SliderProps) => {
 
   return (
     <div
-      className={`flex justify-between items-stretch max-w-[calc(100lvw-20px)]`}
+      className={`flex justify-between items-stretch max-w-[calc(100lvw-20px)] lg:w-[calc(80lvw-20px)]`}
       ref={sliderRef.ref}
     >
       <button

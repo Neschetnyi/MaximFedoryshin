@@ -143,10 +143,8 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
 
         {/* Контент */}
         <div
-          className={`transition-all duration-300 overflow-hidden ${
-            !isVisibleMobile
-              ? " flex flex-col justify-end  h-dvh w-full"
-              : "h-px"
+          className={`flex flex-col justify-end w-full transition-all duration-300 ease-in-out overflow-hidden ${
+            !isVisibleMobile ? "   h-dvh opacity-100" : "h-px opacity-0"
           }`}
         >
           <ul
