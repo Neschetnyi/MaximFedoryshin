@@ -25,7 +25,7 @@ const AboutMe = ({
     <section ref={aboutMe} id="aboutMe" aria-label="about me">
       <div
         ref={textField.ref}
-        className=" flex  flex-wrap flex-col max-lg:items-center lg:flex-row overflow-hidden backdrop-blur-2xl bg-black/10 min-h-lvh border-b-8 border-b-yellow-950/50"
+        className=" flex  flex-wrap flex-col max-lg:items-center lg:flex-row overflow-hidden backdrop-blur-2xl bg-black/10 min-h-dvh border-b-8 border-b-yellow-950/50"
       >
         <figure
           className={`MaximFoto  w-1/2 lg:w-1/3 lg:pt-15 p-5 flex flex-col  justify-baseline items-center overflow-hidden  `}

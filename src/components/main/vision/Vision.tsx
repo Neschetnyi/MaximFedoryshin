@@ -87,7 +87,7 @@ const Vision = () => {
     rafId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(rafId);
   }, []);
-
+  /*
   useEffect(() => {
     const element = scrollToFooter.current;
     if (!element) return;
@@ -105,12 +105,9 @@ const Vision = () => {
     observer.observe(element);
     return () => observer.disconnect();
   }, []);
-
+*/
   return (
-    <section
-      ref={scrollToFooter}
-      className="h-[70lvh] flex  p-6  mb-[8lvh] w-full "
-    >
+    <section className="h-[70dvh] flex  p-6  mb-[8dvh] w-full ">
       <div className="w-2/10"></div>
       <div className="w-6/10 flex items-baseline justify-center">
         <p
@@ -125,3 +122,6 @@ const Vision = () => {
 };
 
 export default Vision;
+{
+  /*ref={scrollToFooter} */
+}

@@ -14,7 +14,7 @@ const Publications = ({ publications }) => {
       id="publications"
       ref={publications}
       aria-labelledby="publications"
-      className="w-full pt-20 flex flex-col items-center mb-20 h-lvh"
+      className="w-full pt-20 flex flex-col items-center mb-20 h-dvh"
     >
       <h2
         id="certificates-title"

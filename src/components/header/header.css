@@ -1,7 +1,7 @@
 @reference "../../App.css";
 
 .header {
-  @apply w-full h-[calc(100lvh-5lvh)]   flex flex-col justify-between overflow-hidden;
+  @apply w-full h-[calc(100dvh-42px)]   flex flex-col justify-between overflow-hidden;
 }
 .headerWrapper {
   @apply flex flex-col pt-36;

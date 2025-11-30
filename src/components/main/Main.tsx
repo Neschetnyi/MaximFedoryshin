@@ -13,7 +13,7 @@ const Main = ({ refs }: { refs: refsType }) => {
   console.log("Main refs =", refs);
   const { aboutMe, services, teraphy, publications } = refs;
   return (
-    <main className="min-h-lvh flex flex-col items-center">
+    <main className="min-h-dvh flex flex-col items-center">
       <AboutMe aboutMe={aboutMe} />
       <Sertificates />
       <Services services={services} />
