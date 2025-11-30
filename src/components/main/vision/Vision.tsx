@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 
 const Vision = () => {
   const textRef = useRef<HTMLParagraphElement | null>(null);
-  const scrollToFooter = useRef(null);
 
   useEffect(() => {
     console.log("Vision render");
@@ -87,25 +86,7 @@ const Vision = () => {
     rafId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(rafId);
   }, []);
-  /*
-  useEffect(() => {
-    const element = scrollToFooter.current;
-    if (!element) return;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        window.scrollTo({
-          top: document.body.scrollHeight, // 👈 прокрутка в самый низ страницы
-          behavior: "smooth", // плавно
-        });
-        setTimeout(() => observer.unobserve(entry.target), 1000);
-      }
-    });
-
-    observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
-*/
   return (
     <section className="h-[70dvh] flex  p-6  mb-[8dvh] w-full ">
       <div className="w-2/10"></div>
@@ -122,6 +103,3 @@ const Vision = () => {
 };
 
 export default Vision;
-{
-  /*ref={scrollToFooter} */
-}

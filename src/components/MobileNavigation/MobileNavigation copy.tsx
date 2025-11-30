@@ -143,15 +143,13 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
 
         {/* Контент */}
         <div
-          className={`transition-all duration-300 overflow-hidden ${
+          className={`${
             !isVisibleMobile
-              ? " flex flex-col justify-end  h-dvh w-full"
-              : "h-px"
+              ? " flex flex-col justify-end  h-full w-full"
+              : "hidden"
           }`}
         >
-          <ul
-            className={` text-4xl font-bold font-engry text-green-50 flex flex-col text-center justify-around w-full h-full transition-all duration-300 top-0 `}
-          >
+          <ul className=" text-4xl font-bold font-engry text-green-50 flex flex-col text-center justify-around w-full h-full">
             <li className="listEl w-full block aboutMe">
               <a
                 href="#aboutMe"

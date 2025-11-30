@@ -1,7 +1,11 @@
 import { useIntersectionAnimation } from "../../../shared/hooks/useIntersectionAnimation";
 
-const Services = ({ services }) => {
-  const labelRef = useIntersectionAnimation({ threshold: 0.1 });
+const Services = ({
+  services,
+}: {
+  services: React.RefObject<HTMLDivElement | null>;
+}) => {
+  const labelRef = useIntersectionAnimation<HTMLDivElement>({ threshold: 0.1 });
   const elderRef = useIntersectionAnimation<HTMLDivElement>({ threshold: 0.1 });
   const yangRef = useIntersectionAnimation<HTMLDivElement>({ threshold: 0.1 });
   const researchRef = useIntersectionAnimation<HTMLDivElement>({

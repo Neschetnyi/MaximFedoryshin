@@ -5,7 +5,11 @@ import { useModal } from "../../../shared/components/ModalWindow/useModal";
 import Slider from "../../../shared/components/Slider/Slider";
 import { type publicationType } from "./publicationsTypes";
 
-const Publications = ({ publications }) => {
+const Publications = ({
+  publications,
+}: {
+  publications: React.RefObject<HTMLDivElement | null>;
+}) => {
   const { modalData, isVisible, openModal, closeModal } =
     useModal<publicationType>();
 
