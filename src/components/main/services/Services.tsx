@@ -16,7 +16,7 @@ const Services = ({ services }) => {
     <section
       ref={services}
       id="services"
-      className=" w-auto  p-30  m-30  border-b-solid border-b-2 border-b-red-100/0 overflow-hidden"
+      className=" w-lvw  p-30  m-30  border-b-solid border-b-2 border-b-red-100/0 overflow-hidden"
       aria-label="services"
     >
       <div ref={labelRef.ref}>
