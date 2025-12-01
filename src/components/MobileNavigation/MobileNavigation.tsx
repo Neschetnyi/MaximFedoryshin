@@ -148,7 +148,7 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
           }`}
         >
           <ul
-            className={` text-xl font-bold font-engry text-green-50 flex flex-col text-center justify-around w-lvw h-full transition-all duration-300 top-0 `}
+            className={` text-xl landscape:text-lg font-bold font-engry text-green-50 flex flex-col text-center justify-around w-lvw h-full transition-all duration-300 top-0 `}
           >
             <li className="listEl  block">
               <a
