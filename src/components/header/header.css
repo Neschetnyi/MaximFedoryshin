@@ -4,14 +4,19 @@
   @apply w-full h-[calc(100dvh-42px)]   flex flex-col justify-between overflow-hidden;
 }
 .headerWrapper {
-  @apply flex flex-col pt-36;
+  @apply flex flex-col pt-36
+  max-tinym:landscape:pt-5
+  landscape:pt-5
+  lg:landscape:pt-36;
 }
 
 /*animations*/
 .slogan {
   @apply lg:text-5xl
+  sm:text-2xl
   md:text-4xl
   text-2xl
+  max-tinym:text-xl
    text-green-50 self-start ml-40 transition duration-800 delay-300 ease-out;
 }
 .sloganNotVisible {
@@ -23,7 +28,9 @@
   xl:text-7xl
   lg:text-6xl
   md:text-5xl
-  text-4xl
+  sm:text-4xl
+  max-tinym:text-2xl
+  text-3xl
   
   border-2 border-amber-200 w-10/12 
                 font-['Engry',serif]  text-shadow-lg text-shadow-green-950  text-green-50 self-center  
@@ -52,7 +59,9 @@
 }
 
 .profession {
-  @apply text-green-50 self-end mr-30 transition duration-900 delay-1400 ease-out;
+  @apply text-green-50 self-end mr-20 transition duration-900 delay-1400 ease-out
+  md:mr-30
+  max-tinym:mr-10;
 }
 
 .professionNotVisible {
@@ -63,5 +72,6 @@
   @apply xl:text-[2rem]
   lg:text-2xl
   md:text-2xl
-  text-xl;
+  text-xl
+  max-tinym:text-lg;
 }

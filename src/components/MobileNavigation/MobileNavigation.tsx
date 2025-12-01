@@ -148,54 +148,54 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
           }`}
         >
           <ul
-            className={` text-4xl font-bold font-engry text-green-50 flex flex-col text-center justify-around w-full h-full transition-all duration-300 top-0 `}
+            className={` text-xl font-bold font-engry text-green-50 flex flex-col text-center justify-around w-lvw h-full transition-all duration-300 top-0 `}
           >
-            <li className="listEl w-full block aboutMe">
+            <li className="listEl  block">
               <a
                 href="#aboutMe"
                 onClick={(e) => handleLinkClick(e, aboutMe)}
-                className="aHover w-full"
+                className="aMobileMenu w-full"
               >
                 Обо мне |
               </a>
             </li>
 
-            <li className="listEl services w-full block">
+            <li className="listEl  block">
               <a
                 href="#services"
                 onClick={(e) => handleLinkClick(e, services)}
-                className="aHover w-full"
+                className="aMobileMenu w-full"
               >
                 Услуги |
               </a>
             </li>
 
-            <li className="listEl aboutTFP w-full block">
+            <li className="listEl  block">
               <a
                 href="#TFP"
                 onClick={(e) => handleLinkClick(e, teraphy)}
-                className="aHover w-full"
+                className="aMobileMenu w-full"
               >
                 Что такое TFP |
               </a>
             </li>
 
-            <li className="listEl publications w-full block">
+            <li className="listEl  block">
               <a
                 href="#publications"
                 onClick={(e) => handleLinkClick(e, publications)}
-                className="aHover"
+                className="aMobileMenu w-full"
               >
                 Статьи |
               </a>
             </li>
 
-            <li className="listEl publications w-full block">
+            <li className="listEl  block">
               <a
                 href="https://t.me/MaximFedoryshin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="aHover"
+                className="aMobileMenu w-full"
                 onClick={handleLinkClickSign}
               >
                 Записаться <br />
@@ -215,7 +215,7 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
             ${isStuck ? "" : "hidden"}
           `}
         >
-          ≡ &&
+          ≡
         </button>
       </nav>
     </>

@@ -38,6 +38,7 @@
   --font-old: "Old Standard TT", serif;
   --font-miamanueva: "Miamanueva", serif;
   --font-engry: "Engry", serif;
+  --breakpoint-tinym: 25rem;
   --breakpoint-mdlg: 64rem;
   --breakpoint-xllg: 89rem;
 }
@@ -49,8 +50,15 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5lvh;
+    scroll-padding-block-start: 40dvh;
   }
+
+  @media (min-width: theme(--breakpoint-lg)) {
+    html {
+      scroll-padding-block-start: 0px;
+    }
+  }
+
   body {
     font-family: var(--font-old);
   }
