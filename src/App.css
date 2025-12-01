@@ -69,7 +69,7 @@
 }
 
 .contentWrapper {
-  @apply flex flex-col  w-[100lvw]  border-0 m-0 p-0 bg-fixed bg-cover bg-center  transition-all duration-400 ease-out
+  @apply flex flex-col  w-[100lvw]  border-0 m-0 p-0 bg-fixed  bg-center  transition-all duration-400 ease-out
   lg:w-[80lvw];
 }
 
