@@ -25,7 +25,7 @@ const TFP = ({ teraphy }: { teraphy: refsType["teraphy"] }) => {
         </h3>
 
         <iframe
-          className={`overflow-hidden transition-all duration-600 w-full aspect-video h-auto ${
+          className={`overflow-hidden transition-all duration-600 w-[80%] aspect-video h-auto ${
             !videoRef.isVisible && "opacity-0 scale-1000 rotate-90"
           }`}
           title="Отто Кернберг о Фокусированной на переносе терапии (TFP)"

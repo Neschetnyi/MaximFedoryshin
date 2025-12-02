@@ -32,7 +32,7 @@ const Services = ({
           <h2>Форматы психотерапевтической работы</h2>
         </div>
 
-        <div className="flex flex-col justify-around text-lg h-7/8">
+        <div className="flex flex-col justify-around md:pr-10 md:pl-10 lg:pr-15 lg:pl-15 text-lg h-7/8">
           <div className="w-full h-0" ref={elderRef.ref}></div>
           <div
             className={`rounded-2xl p-5 h-full mb-2 transition-all  duration-1000 ${
