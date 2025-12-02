@@ -88,16 +88,18 @@ const Vision = () => {
   }, []);
 
   return (
-    <section className="h-[70dvh] flex  p-6  mb-[8dvh] w-full ">
-      <div className="w-2/10"></div>
-      <div className="w-6/10 flex items-baseline justify-center">
+    <section className="h-[calc(100dvh-280px)] flex  p-6   w-full ">
+      <div className="w-full flex items-baseline justify-center ">
         <p
           ref={textRef}
-          className="text-6xl font-bold text-green-50 leading-relaxed transition-opacity ease-out text-center "
+          className="
+          text-3xl
+          sm:text-4xl
+          md:text-5xl
+           font-bold text-green-50 leading-relaxed transition-opacity ease-out text-center "
           style={{ textShadow: "0 0 6px rgba(0,0,0,0.3)" }}
         />
       </div>
-      <div className="w-2/10"></div>
     </section>
   );
 };

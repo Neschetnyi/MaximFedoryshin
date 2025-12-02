@@ -12,11 +12,11 @@ const TFP = ({ teraphy }: { teraphy: refsType["teraphy"] }) => {
       id="TFP"
       ref={teraphy}
       aria-label="Kernberg video interview about TFP"
-      className=" lg:w-[80lvw] w-lvw mb-[20dvh] p-5 md:p-10 bg-amber-100/80 overflow-hidden border-yellow-950/50 border-b-8 border-t-8  flex flex-col items-center"
+      className=" lg:w-[80lvw] w-lvw mb-[20dvh] p-5 md:p-10 lg:mt-30 mt-20 bg-amber-100/80 overflow-hidden border-yellow-950/50 border-b-8 border-t-8  flex flex-col items-center"
     >
       <div className="w-full flex flex-col items-center overflow-hidden">
         <h3
-          className="text-xl font-['Engry',serif] font-bold text-green-50 w-full p-2 mb-4"
+          className="text-lg md:text-xl font-['Engry',serif] font-bold text-green-50 w-full p-2 mb-4"
           style={{
             backgroundColor: "rgba(0, 0, 0, 0.2)",
           }}
@@ -25,13 +25,11 @@ const TFP = ({ teraphy }: { teraphy: refsType["teraphy"] }) => {
         </h3>
 
         <iframe
-          className={`overflow-hidden transition-all duration-600 ${
+          className={`overflow-hidden transition-all duration-600 w-full aspect-video h-auto ${
             !videoRef.isVisible && "opacity-0 scale-1000 rotate-90"
           }`}
           title="Отто Кернберг о Фокусированной на переносе терапии (TFP)"
           src="https://player.vimeo.com/video/645996054?h=df9096ba3d"
-          width="640"
-          height="360"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; "
         ></iframe>
         <p ref={videoRef.ref} className="video-source">
@@ -72,7 +70,7 @@ const TFP = ({ teraphy }: { teraphy: refsType["teraphy"] }) => {
         <br />
 
         <h3
-          className={`text-2xl font-['Engry',serif] font-bold text-green-50 w-full p-2 mb-2 
+          className={`text-lg md:text-xl font-['Engry',serif] font-bold text-green-50 w-full p-2 mb-2 
             transition-all duration-600 ${
               !myVision.isVisible && "opacity-0 scale-1000 rotate-90"
             }`}

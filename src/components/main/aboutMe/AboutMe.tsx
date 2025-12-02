@@ -33,7 +33,7 @@ const AboutMe = ({
           <div ref={myName.ref} className=" w-full h-px"></div>
           <figcaption>
             <strong
-              className={`xl:text-2xl xllg:text-3xl 2xl:text-4xl lg:text-2xl md:text-4xl text-2xl inline-block font-['Engry',serif] font-bold text-green-50 pb-5 transitionAll duration-1000 ${
+              className={`xl:text-2xl xllg:text-3xl 2xl:text-4xl lg:text-2xl md:text-4xl max-tinym:text-lg sm:text-2xl text-xl inline-block font-['Engry',serif] font-bold text-green-50 pb-5 transitionAll duration-1000 ${
                 !myName.isVisible && "-translate-x-[50vw] opacity-0 "
               }`}
             >
@@ -67,23 +67,32 @@ const AboutMe = ({
         >
           <div className="flex h-full flex-col justify-between">
             <div className="pt-10">
-              <strong className="text-2xl">
+              <strong className="text-xl md:text-2xl">
                 <ul>
                   <li className={`transition-all duration-1000 notVisibleText`}>
                     Врач-психиатр
+                    <hr />
                   </li>
+
                   <li className={`transition-all duration-1000 notVisibleText`}>
                     Психотерапевт
+                    <hr />
                   </li>
+
                   <li className={`transition-all duration-1000 notVisibleText`}>
                     Психолог-психоаналитик
+                    <hr />
                   </li>
+
                   <li className={`transition-all duration-1000 notVisibleText`}>
                     Член Русскоязычного Общества Терапии, фокусированной на
                     переносе *
+                    <hr />
                   </li>
+
                   <li className={`transition-all duration-1000 notVisibleText`}>
                     Кандидат в ТФП-терапевты ISTFP **
+                    <hr />
                   </li>
                 </ul>
               </strong>
@@ -168,37 +177,47 @@ const AboutMe = ({
             </div>
             <br />
             <br />
-            <div className="pb-10 pl-20 pr-10">
-              <strong className="text-2xl transition-all duration-1000 notVisibleText">
+            <div className="pb-10 pl-10 pr-5 md:pl-20 md:pr-10">
+              <strong className="text-xl md:text-2xl transition-all duration-1000 notVisibleText">
                 Работаю под супервизией психотерапевтов с мировым именем:
               </strong>
               <br />
               <br />
-              <ul className="text-xl">
-                <li className={`transition-all duration-1000 notVisibleText`}>
+              <ul className="text-lg md:text-xl">
+                <li
+                  className={`transition-all duration-1000 notVisibleText pb-5`}
+                >
                   {" "}
                   <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B5%D1%80%D0%BD%D0%B1%D0%B5%D1%80%D0%B3,_%D0%9E%D1%82%D1%82%D0%BE">
                     <strong>Отто Кернберг</strong>
-                    <br />
+                    <span> https://ru.wikipedia.org/</span> <hr />
                     <em>- крупнейший современный мыслитель психонализа</em>
                   </a>
                 </li>
-                <li className={`transition-all duration-1000 notVisibleText`}>
+                <li
+                  className={`transition-all duration-1000 notVisibleText pb-5`}
+                >
                   {" "}
                   <a href="https://www.frankyeomans.com/curriculum-vitae.php">
                     <strong>Фрэнк Йоманс</strong>
-                    <br />
+                    <span> https://www.frankyeomans.com/</span>
+                    <hr />
+
                     <em>
                       - Президент Международного общества терапии,
                       фокусированной на переносе
                     </em>
                   </a>
                 </li>
-                <li className={`transition-all duration-1000 notVisibleText`}>
+                <li
+                  className={`transition-all duration-1000 notVisibleText pb-5`}
+                >
                   {" "}
                   <a href="https://verosteiner.com/">
                     <strong>Вероника Штайнер</strong>
-                    <br />
+                    <span> https://verosteiner.com/</span>
+                    <hr />
+
                     <em> - координатор группы развития ТФП Чили</em>
                   </a>
                 </li>

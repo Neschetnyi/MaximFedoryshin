@@ -19,7 +19,7 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         const ratio = entry.intersectionRatio;
-        const shift = ratio * footer.offsetHeight;
+        const shift = ratio * 200;
         setBgOffset(shift);
       },
       {

@@ -39,35 +39,22 @@ const App = () => {
   };
 
   return (
-    <div className="appWrapper ">
+    <div className="appWrapper">
       {/* 🔹 Фон фиксированный, но сдвигается через backgroundPositionY */}
-      {/* Внешний фиксированный слой */}
-      <div className="fixed inset-0 -z-10 flex justify-center">
-        {/* Внутренний центрированный слой с шириной 80lvw */}
-        <div
-          className="
-           m-0 p-0
-           w-[100lvw] lg:w-[80lvw]
-           bg-cover bg-bottom 
-           bg-mobile lg:bg-desktop
-           transition-all duration-400 ease-out
-          "
-          style={{
-            backgroundPositionY: `-${bgOffset}px`,
-          }}
-        />
-      </div>
-      <div className="contentWrapper">
+      <div
+        className="contentWrapper"
+        style={{
+          backgroundPositionY: `-${bgOffset}px`,
+        }}
+      >
         <Header />
         <Navigation refs={refs} />
         <MobileNavigation refs={refs} />
         <Separator />
-
         <Main refs={refs} />
         {/* 🔹 футер с ref для наблюдения */}
         <div className="footerWrapper">
           <Separator />
-
           <Footer setBgOffset={setBgOffset} />
         </div>
       </div>

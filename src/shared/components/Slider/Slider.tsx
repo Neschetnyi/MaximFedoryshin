@@ -20,7 +20,7 @@ const Slider = ({ children }: SliderProps) => {
 
   return (
     <div
-      className={`flex justify-between items-stretch max-w-[calc(100lvw-20px)] lg:w-[calc(80lvw-20px)]`}
+      className={`flex justify-center items-stretch max-w-[calc(100lvw-20px)] lg:w-[calc(80lvw-20px)]`}
       ref={sliderRef.ref}
     >
       <button
@@ -34,12 +34,17 @@ const Slider = ({ children }: SliderProps) => {
       </button>
 
       <div
-        className={`relative w-11/12 max-w-5xl 
+        className={`relative
+          mr-3
+          ml-3
           overflow-hidden 
           rounded-2xl 
           border-4
            border-yellow-950/30 
            certificates-container 
+           transition-all duration-500 ease-in ${
+             !sliderRef.isVisible ? "max-w-px" : "max-w-[80lvw]"
+           }
            `}
         onMouseEnter={stopAutoScroll}
         onMouseLeave={startAutoScroll}
@@ -56,7 +61,7 @@ const Slider = ({ children }: SliderProps) => {
                      [-ms-overflow-style:none] 
                      [scrollbar-width:none]
                      transition-all duration-500 ease-in ${
-                       !sliderRef.isVisible ? "max-w-0" : "max-w-5xl"
+                       !sliderRef.isVisible ? "max-w-px" : "max-w-[80lvw]"
                      }`}
         >
           {children}

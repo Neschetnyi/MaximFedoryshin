@@ -1,13 +1,17 @@
 @reference "tailwindcss";
 
 .navigation {
-  @apply hidden w-full z-20 bg-white/30 backdrop-blur-md h-[5lvh] sticky top-0 flex justify-around items-center 
-                transition duration-300 delay-1600 ease-out pr-5 pl-5
+  @apply hidden text-[1.5lvw] w-full z-20 bg-white/30 backdrop-blur-md h-[42px] sticky top-0  
+                transition duration-300 delay-1600 ease-out pr-5 pl-5 
                 lg:block;
 }
 
 .navigationNotVisible {
   @apply translate-y-50 opacity-0;
+}
+
+.navLi {
+  @apply flex justify-center items-center;
 }
 
 .aboutMe {
@@ -31,7 +35,7 @@
 }
 
 .signToServicesSpan {
-  @apply font-['Miamanueva'] text-4xl text-green-50 text-shadow-lg text-shadow-green-950 
+  @apply font-['Miamanueva'] text-[2lvw] text-green-50 text-shadow-lg text-shadow-green-950 
                     transition duration-300 ease-out delay-3000;
 }
 
@@ -44,7 +48,7 @@
 }
 
 .aHover {
-  @apply transition-all ease-out duration-300 hover:text-shadow-lg pr-1 pl-1 hover:font-bold hover:text-green-50;
+  @apply transition-all ease-out duration-300 hover:text-shadow-lg  hover:font-bold hover:text-green-50;
 }
 
 .aHover:hover {

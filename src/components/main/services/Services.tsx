@@ -25,7 +25,7 @@ const Services = ({
     >
       <div ref={labelRef.ref}>
         <div
-          className={`text-2xl font-['Engry',serif] font-bold text-green-50 h-1/8 pb-20 flex justify-center 
+          className={`text-lg sm:text-2xl font-['Engry',serif] font-bold text-green-50 h-1/8 pt-10 pb-20 flex justify-center 
           transition-all duration-500
           ${!labelRef.isVisible && "opacity-0 translate-y-10"}`}
         >

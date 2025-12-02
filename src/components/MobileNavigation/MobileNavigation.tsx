@@ -218,6 +218,7 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
           ≡
         </button>
       </nav>
+      <div className={`lg:h-px h-[42px] ${isStuck && "hidden"}`}></div>
     </>
   );
 };

@@ -55,8 +55,10 @@ const Navigation = ({ refs }: { refs: refsType }) => {
       {/* Маяк перед кнопкой */}
       <div ref={sentinelRef} className="w-px h-px"></div>
       <nav className={`navigation ${!isVisible && "navigationNotVisible"}`}>
-        <ul className="text-2xl flex items-center justify-around w-full">
-          <li className={`aboutMe ${!isVisible && "navigationNotVisible"}`}>
+        <ul className=" flex items-center justify-around w-full h-full">
+          <li
+            className={`aboutMe navLi ${!isVisible && "navigationNotVisible"}`}
+          >
             <a
               href="#aboutMe"
               className="aHover"
@@ -65,7 +67,9 @@ const Navigation = ({ refs }: { refs: refsType }) => {
               Обо мне |
             </a>
           </li>
-          <li className={`services ${!isVisible && "navigationNotVisible"}`}>
+          <li
+            className={`services navLi ${!isVisible && "navigationNotVisible"}`}
+          >
             <a
               href="#services"
               className="aHover"
@@ -74,7 +78,9 @@ const Navigation = ({ refs }: { refs: refsType }) => {
               Услуги |
             </a>
           </li>
-          <li className={`aboutTFP ${!isVisible && "navigationNotVisible"}`}>
+          <li
+            className={`aboutTFP navLi ${!isVisible && "navigationNotVisible"}`}
+          >
             <a
               href="#TFP"
               className="aHover"
@@ -84,7 +90,9 @@ const Navigation = ({ refs }: { refs: refsType }) => {
             </a>
           </li>
           <li
-            className={`publications ${!isVisible && "navigationNotVisible"}`}
+            className={`publications navLi ${
+              !isVisible && "navigationNotVisible"
+            }`}
           >
             <a
               href="#publications"
@@ -96,12 +104,12 @@ const Navigation = ({ refs }: { refs: refsType }) => {
           </li>
 
           <li
-            className={`signToServices ${
+            className={`signToServices navLi ${
               signToChangeStuck ? "stuck signHover" : "stuckHover"
             }`}
           >
             <div
-              className={`signToServicesSpan ${
+              className={`signToServicesSpan  ${
                 !isVisible && "navigationNotVisible"
               }
               `}
