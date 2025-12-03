@@ -15,7 +15,7 @@
 }
 
 .figure {
-  @apply absolute bottom-[200px] landscape:hidden;
+  @apply absolute bottom-[200px];
 }
 
 .footerImg {
