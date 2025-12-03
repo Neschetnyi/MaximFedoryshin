@@ -29,7 +29,7 @@ const Publications = ({
       id="publications"
       ref={publications}
       aria-labelledby="publications"
-      className="w-full pt-20 flex flex-col items-center mb-10 h-[80dvh] landscape:max-md:h[140dvh]"
+      className="w-full pt-20 flex flex-col items-center mb-10 h-[80dvh]"
     >
       <h2
         id="certificates-title"
@@ -71,7 +71,7 @@ const Publications = ({
         {modalData && (
           <div className="flex justify-center ">
             <div className="w-[60lvw] max-h-[90dvh]">
-              <figure>
+              <figure className="max-md:landscape:hidden">
                 <picture>
                   <source
                     media="(min-width:1024px)"
