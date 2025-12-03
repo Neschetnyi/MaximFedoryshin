@@ -1,13 +1,11 @@
-import style from "./separator.module.css";
-
-import bgImage from "../../../assets/clipart/c936e4edb70011f0ac1eba491b3b44de_1.jpeg";
+import "./separator.css";
 
 const Separator = () => {
   return (
     <div
-      className={style.separator}
+      className="separator"
       style={{
-        backgroundImage: `url(${bgImage})`,
+        backgroundImage: `url("./clipart/separator.webp")`,
       }}
     ></div>
   );

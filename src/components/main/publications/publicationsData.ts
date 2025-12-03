@@ -1,15 +1,3 @@
-import img1 from "../../../assets/publications/1.jpg";
-import img2 from "../../../assets/publications/2.jpg";
-import img3 from "../../../assets/publications/3.jpg";
-import img4 from "../../../assets/publications/4.jpg";
-import img5 from "../../../assets/publications/5.jpg";
-import img6 from "../../../assets/publications/6.jpg";
-import img7 from "../../../assets/publications/7.jpg";
-import img8 from "../../../assets/publications/8.jpg";
-import img9 from "../../../assets/publications/9.jpg";
-import img10 from "../../../assets/publications/10.jpg";
-import img11 from "../../../assets/publications/11.jpg";
-
 export const publicationsData = [
   {
     id: 1,
@@ -44,7 +32,11 @@ export const publicationsData = [
 
 Запись на терапию VK, Telegram, WhatsApp 8-909-731-20-44 Максим Федорышин
         `,
-    imgSrc: img1,
+    imgSrc: {
+      preview: "./publications/preview/1.webp",
+      mobile: "./publications/mobile/1.webp",
+      desktop: "./publications/desktop/1.webp",
+    },
   },
   {
     id: 2,
@@ -74,7 +66,11 @@ ________________________________________
 Таким образом, горевание — это не просто тяжелый этап, который нужно «пережить», а сложный внутренний процесс, в котором отношения с теми, кто ушёл, продолжаются и трансформируются внутри нашего разума. Это понимание даёт надежду и дополнительные ресурсы тем, кто сталкивается с утратой и ищет поддержку.
 
 Запись на терапию VK, Telegram, WhatsApp 8-909-731-20-44 Максим Федорышин`,
-    imgSrc: img2,
+    imgSrc: {
+      preview: "./publications/preview/2.webp",
+      mobile: "./publications/mobile/2.webp",
+      desktop: "./publications/desktop/2.webp",
+    },
   },
   {
     id: 3,
@@ -98,7 +94,11 @@ ________________________________________
 К сожалению, не все пациенты достигают стадии вопроса «Могу ли я любить?». И это по-настоящему печально. Именно здесь зачастую заканчивается путь многих — из-за страха, сопротивления или недостатка внутреннего ресурса изменить устоявшиеся внутренние паттерны. Но даже движение к первому или второму вопросу уже важно — оно означает начало трансформации.
 
 Запись на терапию VK, Telegram, WhatsApp 8-909-731-20-44 Максим Федорышин`,
-    imgSrc: img3,
+    imgSrc: {
+      preview: "./publications/preview/3.webp",
+      mobile: "./publications/mobile/3.webp",
+      desktop: "./publications/desktop/3.webp",
+    },
   },
   {
     id: 4,
@@ -132,7 +132,11 @@ ________________________________________
 Терапия фокусированная на переносе — это не быстрый рецепт, а процесс, требующий терпения и участия обоих — врача и пациента. Но именно в таком глубоком сотрудничестве рождаются настоящие перемены.
 
 Запись на терапию VK, Telegram, WhatsApp 8-909-731-20-44 Максим Федорышин`,
-    imgSrc: img4,
+    imgSrc: {
+      preview: "./publications/preview/4.webp",
+      mobile: "./publications/mobile/4.webp",
+      desktop: "./publications/desktop/4.webp",
+    },
   },
   {
     id: 5,
@@ -150,7 +154,11 @@ ________________________________________
 
 И помните психоанализ не принесет счастья, но поможет вам быть ближе к реальности.
 Запись на терапию Viber, WhatsApp 8-909-731-20-44 Максим Федорышин`,
-    imgSrc: img5,
+    imgSrc: {
+      preview: "./publications/preview/5.webp",
+      mobile: "./publications/mobile/5.webp",
+      desktop: "./publications/desktop/5.webp",
+    },
   },
   {
     id: 6,
@@ -171,7 +179,11 @@ ________________________________________
 
 С одной стороны это, кажется, всего лишь теория, но с другой это варианты того, что происходит во время вполне реальных встреч терапевта и пациента.
 Запись на терапию Viber, WhatsApp 8-909-731-20-44 Максим Федорышин`,
-    imgSrc: img6,
+    imgSrc: {
+      preview: "./publications/preview/6.webp",
+      mobile: "./publications/mobile/6.webp",
+      desktop: "./publications/desktop/6.webp",
+    },
   },
   {
     id: 7,
@@ -194,7 +206,11 @@ ________________________________________
 И, наверное, если как-то попробовать это резюмировать, то можно вспомнить известную фразу Зигмунда Фрейда о том, что главное в жизни –это любить и работать. И получать удовольствие от этого.
 
 Запись на терапию Viber, WhatsApp 8-909-731-20-44 Максим Федорышин`,
-    imgSrc: img7,
+    imgSrc: {
+      preview: "./publications/preview/7.webp",
+      mobile: "./publications/mobile/7.webp",
+      desktop: "./publications/desktop/7.webp",
+    },
   },
   {
     id: 8,
@@ -212,7 +228,11 @@ ________________________________________
 Ну, и важно понимать, что иногда бывают варианты атипичных депрессий или рефрактерных депрессий, которые не реагируют на антидепрессанты. А также имеют место и сложные варианты сочетания депрессии и личностного расстройства. В любом случае при подозрении на депрессивные симптомы лучше обращаться к специалистам.
 
 Запись на терапию 8-909-731-20-44`,
-    imgSrc: img8,
+    imgSrc: {
+      preview: "./publications/preview/8.webp",
+      mobile: "./publications/mobile/8.webp",
+      desktop: "./publications/desktop/8.webp",
+    },
   },
   {
     id: 9,
@@ -225,7 +245,11 @@ ________________________________________
 Надеюсь, что это будет полезно всем, кого интересуется данной темой.
 
 Запись на терапию 8-909-731-20-44 Максим Федорышин.`,
-    imgSrc: img9,
+    imgSrc: {
+      preview: "./publications/preview/9.webp",
+      mobile: "./publications/mobile/9.webp",
+      desktop: "./publications/desktop/9.webp",
+    },
   },
   {
     id: 10,
@@ -241,7 +265,11 @@ ________________________________________
 В любом случае нормальная личность - это не точка на воображаемой шкале, не линия, после которой начинается неадекватность. Это скорее динамический диапазон, который может двигаться то в одну, то в другую сторону.
 
 Запись на терапию 8-909-731-20-44 Максим Федорышин`,
-    imgSrc: img10,
+    imgSrc: {
+      preview: "./publications/preview/10.webp",
+      mobile: "./publications/mobile/10.webp",
+      desktop: "./publications/desktop/10.webp",
+    },
   },
   {
     id: 11,
@@ -259,6 +287,10 @@ ________________________________________
 Ну, как же без этого. Выразить злость –это мощный инструмент регуляции психики. Ничто так не снижает напряжения в психике, как возможность «снести»другого человека, желательно взрослого вспышкой гнева. Правда, агрессия, направленная на себя работает подобным образом. Подростковость - возраст, склонный к самодеструктивным тенденциям.А повторяющаяся агрессия-это всегда попытка справиться с ненавистью к себе.
 Скайп fedoryshin
 Запись на терапию 8-909-731-20-44 Максим Федорышин`,
-    imgSrc: img11,
+    imgSrc: {
+      preview: "./publications/preview/11.webp",
+      mobile: "./publications/mobile/11.webp",
+      desktop: "./publications/desktop/11.webp",
+    },
   },
 ];

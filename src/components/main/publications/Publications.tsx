@@ -13,6 +13,17 @@ const Publications = ({
   const { modalData, isVisible, openModal, closeModal } =
     useModal<publicationType>();
 
+  const prefetchImage = (url: string) => {
+    // если уже префетчено — не повторять
+    if (document.querySelector(`link[rel="prefetch"][href="${url}"]`)) return;
+
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.as = "image";
+    link.href = url;
+    document.head.appendChild(link);
+  };
+
   return (
     <section
       id="publications"
@@ -32,11 +43,15 @@ const Publications = ({
           <div
             className="cursor-pointer bg-black/15 backdrop-blur-lg rounded-lg w-[15vw] min-w-[150px] h-[30vh] shrink-0 transition-transform duration-300 ease-in-out hover:scale-105"
             key={publication.id}
-            onClick={() => openModal(publication)}
+            onClick={() => {
+              prefetchImage(publication.imgSrc.desktop);
+              prefetchImage(publication.imgSrc.mobile);
+              openModal(publication);
+            }}
           >
             <figure className="mb-2 cursor-pointer shrink-0 w-full  h-[15vh] overflow-hidden rounded-xl ">
               <img
-                src={publication.imgSrc}
+                src={publication.imgSrc.preview}
                 alt={publication.title}
                 className=" object-cover w-full h-full "
               />
@@ -55,16 +70,26 @@ const Publications = ({
       <ModalWindow isVisible={isVisible} closeModal={closeModal}>
         {modalData && (
           <div className="flex justify-center ">
-            <div className="w-[60vw] max-h-[90vh]">
-              <img
-                src={modalData.imgSrc}
-                alt={modalData.title}
-                className="object-contain max-w-full max-h-[40vh] rounded-lg shadow-2xl mb-4"
-              />
+            <div className="w-[60lvw] max-h-[90dvh]">
+              <figure>
+                <picture>
+                  <source
+                    media="(min-width:1024px)"
+                    srcSet={modalData.imgSrc.desktop}
+                    type="image/webp"
+                  />
+                  <img
+                    src={modalData.imgSrc.mobile}
+                    alt={modalData.title}
+                    className="object-contain max-w-[45lvw] max-h-[20dvh] lg:max-h-[40dvh] rounded-lg shadow-2xl mb-4"
+                  />
+                </picture>
+              </figure>
+
               <h3 className="text-lg font-['Engry',serif] mb-4 text-green-50">
                 {modalData.title}
               </h3>
-              <p className="text-green-50 h-[30vh] overflow-y-scroll">
+              <p className="text-green-50 max-h-[50dvh] lg:max-h-[35dvh] overflow-y-scroll">
                 <pre className="whitespace-pre-wrap text-green-50 font-['Old_Standard_TT',serif]">
                   {modalData.content}
                 </pre>

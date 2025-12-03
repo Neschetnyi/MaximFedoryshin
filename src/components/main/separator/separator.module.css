@@ -1,6 +1,0 @@
-@reference "tailwindcss";
-
-.separator {
-  @apply h-[42px] w-[100lvw] bg-cover bg-center border-b-8 border-t-8 border-yellow-950/50
-  lg:w-[80lvw] lg:h-[8lvh];
-}

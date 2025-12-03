@@ -19,7 +19,7 @@
 }
 
 .footerImg {
-  @apply w-[80lvw] sm:h-[60dvh] sm:w-auto;
+  @apply w-[75lvw] lg:max-w-[600px]  object-contain;
 }
 
 .footerHeadding {

@@ -28,6 +28,7 @@ const TFP = ({ teraphy }: { teraphy: refsType["teraphy"] }) => {
           className={`overflow-hidden transition-all duration-600 w-[80%] aspect-video h-auto ${
             !videoRef.isVisible && "opacity-0 scale-1000 rotate-90"
           }`}
+          loading="lazy"
           title="Отто Кернберг о Фокусированной на переносе терапии (TFP)"
           src="https://player.vimeo.com/video/645996054?h=df9096ba3d"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; "

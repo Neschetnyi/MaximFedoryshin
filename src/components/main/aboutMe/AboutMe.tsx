@@ -1,4 +1,3 @@
-import photo from "../../../assets/photo_2025-10-28_14-14-40.jpg";
 import "./aboutMe.css";
 import { useIntersectionAnimation } from "../../../shared/hooks/useIntersectionAnimation";
 import { useTextAnimation } from "../../../shared/hooks/useTextAnimation";
@@ -42,13 +41,20 @@ const AboutMe = ({
             </strong>
           </figcaption>
           <div ref={imgMyName.ref} className="w-px h-px"></div>
-          <img
-            src={photo}
-            alt="Maxim Fedoryshin"
-            className={`rounded-2xl  transitionAll  duration-1000 ${
-              !imgMyName.isVisible && "-translate-x-[50vw] opacity-0 "
-            }`}
-          />
+          <picture>
+            <source
+              media="(min-width:1024px)"
+              srcSet="./maxFoto/maxFotoAboutMeDesktop.webp"
+              type="image/webp"
+            />
+            <img
+              src="./maxFoto/maxFotoAboutMeMobile.webp"
+              alt="Maxim Fedoryshin"
+              className={`rounded-2xl  transitionAll  duration-1000 ${
+                !imgMyName.isVisible && "-translate-x-[50vw] opacity-0 "
+              }`}
+            />
+          </picture>
         </figure>
 
         <div

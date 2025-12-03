@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
-export const useModal = <T = string>() => {
+export const useModal = <
+  T = { preview: string; mobile: string; desktop: string }
+>() => {
   const [modalData, setModalData] = useState<T | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 

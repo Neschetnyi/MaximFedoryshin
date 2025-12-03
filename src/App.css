@@ -41,8 +41,8 @@
   --breakpoint-tinym: 25rem;
   --breakpoint-mdlg: 64rem;
   --breakpoint-xllg: 89rem;
-  --bg-mobile: url("/bg/mobileBg.jpg");
-  --bg-desktop: url("/bg/desktopBg.jpg");
+  --bg-mobile: url("/bg/mobileBg.webp");
+  --bg-desktop: url("/bg/desktopBg.webp");
 }
 
 @utility bg-mobile {

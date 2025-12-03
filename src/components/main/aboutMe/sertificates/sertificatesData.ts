@@ -1,51 +1,194 @@
-import sert1 from "../../../../assets/sertificates/1.jpg";
-import sert2 from "../../../../assets/sertificates/2.jpg";
-import sert3 from "../../../../assets/sertificates/3.jpg";
-import sert4 from "../../../../assets/sertificates/4.png";
-import sert5 from "../../../../assets/sertificates/5.jpg";
-import sert6 from "../../../../assets/sertificates/6.jpg";
-import sert7 from "../../../../assets/sertificates/7.jpg";
-import sert8 from "../../../../assets/sertificates/8.jpg";
-import sert9 from "../../../../assets/sertificates/9.jpg";
-import sert10 from "../../../../assets/sertificates/10.jpg";
-import sert11 from "../../../../assets/sertificates/11.jpg";
-import sert12 from "../../../../assets/sertificates/12.jpg";
-import sert13 from "../../../../assets/sertificates/13.png";
-import sert14 from "../../../../assets/sertificates/14.jpg";
-import sert15 from "../../../../assets/sertificates/15.png";
-import sert16 from "../../../../assets/sertificates/16.jpg";
-import sert17 from "../../../../assets/sertificates/17.jpg";
-import sert18 from "../../../../assets/sertificates/18.jpg";
-import sert19 from "../../../../assets/sertificates/19.jpg";
-import sert20 from "../../../../assets/sertificates/20.jpg";
-import sert21 from "../../../../assets/sertificates/21.jpg";
-import sert22 from "../../../../assets/sertificates/22.jpg";
-import sert23 from "../../../../assets/sertificates/23.jpg";
-import sert24 from "../../../../assets/sertificates/24.jpg";
-
 export const certificates = [
-  { src: sert1, alt: "Профессиональное образование" },
-  { src: sert2, alt: "Высшее образование" },
-  { src: sert3, alt: "Юнгианское образование" },
-  { src: sert4, alt: "NLP сертификат" },
-  { src: sert5, alt: "NLP сертификат" },
-  { src: sert6, alt: "Профессиональное образование" },
-  { src: sert7, alt: "Высшее образование" },
-  { src: sert8, alt: "Юнгианское образование" },
-  { src: sert9, alt: "NLP сертификат" },
-  { src: sert10, alt: "NLP сертификат" },
-  { src: sert11, alt: "Профессиональное образование" },
-  { src: sert12, alt: "Высшее образование" },
-  { src: sert13, alt: "Юнгианское образование" },
-  { src: sert14, alt: "NLP сертификат" },
-  { src: sert15, alt: "NLP сертификат" },
-  { src: sert16, alt: "Профессиональное образование" },
-  { src: sert17, alt: "Высшее образование" },
-  { src: sert18, alt: "Юнгианское образование" },
-  { src: sert19, alt: "NLP сертификат" },
-  { src: sert20, alt: "NLP сертификат" },
-  { src: sert21, alt: "Профессиональное образование" },
-  { src: sert22, alt: "Высшее образование" },
-  { src: sert23, alt: "Юнгианское образование" },
-  { src: sert24, alt: "NLP сертификат" },
+  {
+    src: {
+      preview: "./sertificates/preview/1.webp",
+      desktop: "./sertificates/desktop/1.webp",
+      mobile: "./sertificates/mobile/1.webp",
+    },
+    alt: "Профессиональное образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/2.webp",
+      desktop: "./sertificates/desktop/2.webp",
+      mobile: "./sertificates/mobile/2.webp",
+    },
+    alt: "Высшее образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/3.webp",
+      desktop: "./sertificates/desktop/3.webp",
+      mobile: "./sertificates/mobile/3.webp",
+    },
+    alt: "Юнгианское образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/4.webp",
+      desktop: "./sertificates/desktop/4.webp",
+      mobile: "./sertificates/mobile/4.webp",
+    },
+    alt: "NLP сертификат",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/5.webp",
+      desktop: "./sertificates/desktop/5.webp",
+      mobile: "./sertificates/mobile/5.webp",
+    },
+    alt: "NLP сертификат",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/6.webp",
+      desktop: "./sertificates/desktop/6.webp",
+      mobile: "./sertificates/mobile/6.webp",
+    },
+    alt: "Профессиональное образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/7.webp",
+      desktop: "./sertificates/desktop/7.webp",
+      mobile: "./sertificates/mobile/7.webp",
+    },
+    alt: "Высшее образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/8.webp",
+      desktop: "./sertificates/desktop/8.webp",
+      mobile: "./sertificates/mobile/8.webp",
+    },
+    alt: "Юнгианское образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/9.webp",
+      desktop: "./sertificates/desktop/9.webp",
+      mobile: "./sertificates/mobile/9.webp",
+    },
+    alt: "NLP сертификат",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/10.webp",
+      desktop: "./sertificates/desktop/10.webp",
+      mobile: "./sertificates/mobile/10.webp",
+    },
+    alt: "NLP сертификат",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/11.webp",
+      desktop: "./sertificates/desktop/11.webp",
+      mobile: "./sertificates/mobile/11.webp",
+    },
+    alt: "Профессиональное образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/12.webp",
+      desktop: "./sertificates/desktop/12.webp",
+      mobile: "./sertificates/mobile/12.webp",
+    },
+    alt: "Высшее образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/13.webp",
+      desktop: "./sertificates/desktop/13.webp",
+      mobile: "./sertificates/mobile/13.webp",
+    },
+    alt: "Юнгианское образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/14.webp",
+      desktop: "./sertificates/desktop/14.webp",
+      mobile: "./sertificates/mobile/14.webp",
+    },
+    alt: "NLP сертификат",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/15.webp",
+      desktop: "./sertificates/desktop/15.webp",
+      mobile: "./sertificates/mobile/15.webp",
+    },
+    alt: "NLP сертификат",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/16.webp",
+      desktop: "./sertificates/desktop/16.webp",
+      mobile: "./sertificates/mobile/16.webp",
+    },
+    alt: "Профессиональное образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/17.webp",
+      desktop: "./sertificates/desktop/17.webp",
+      mobile: "./sertificates/mobile/17.webp",
+    },
+    alt: "Высшее образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/18.webp",
+      desktop: "./sertificates/desktop/18.webp",
+      mobile: "./sertificates/mobile/18.webp",
+    },
+    alt: "Юнгианское образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/19.webp",
+      desktop: "./sertificates/desktop/19.webp",
+      mobile: "./sertificates/mobile/19.webp",
+    },
+    alt: "NLP сертификат",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/20.webp",
+      desktop: "./sertificates/desktop/20.webp",
+      mobile: "./sertificates/mobile/20.webp",
+    },
+    alt: "NLP сертификат",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/21.webp",
+      desktop: "./sertificates/desktop/21.webp",
+      mobile: "./sertificates/mobile/21.webp",
+    },
+    alt: "Профессиональное образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/22.webp",
+      desktop: "./sertificates/desktop/22.webp",
+      mobile: "./sertificates/mobile/22.webp",
+    },
+    alt: "Высшее образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/23.webp",
+      desktop: "./sertificates/desktop/23.webp",
+      mobile: "./sertificates/mobile/23.webp",
+    },
+    alt: "Юнгианское образование",
+  },
+  {
+    src: {
+      preview: "./sertificates/preview/24.webp",
+      desktop: "./sertificates/desktop/24.webp",
+      mobile: "./sertificates/mobile/24.webp",
+    },
+    alt: "NLP сертификат",
+  },
 ];
