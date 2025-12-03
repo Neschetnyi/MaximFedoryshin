@@ -15,7 +15,7 @@
 }
 
 .figure {
-  @apply absolute bottom-[200px];
+  @apply absolute bottom-[200px] max-md:landscape:hidden;
 }
 
 .footerImg {

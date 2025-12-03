@@ -71,7 +71,7 @@ const Publications = ({
         {modalData && (
           <div className="flex justify-center ">
             <div className="w-[60lvw] max-h-[90dvh]">
-              <figure className="max-md:landscape:hidden">
+              <figure>
                 <picture>
                   <source
                     media="(min-width:1024px)"
