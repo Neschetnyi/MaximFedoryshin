@@ -12,7 +12,7 @@ const TFP = ({ teraphy }: { teraphy: refsType["teraphy"] }) => {
       id="TFP"
       ref={teraphy}
       aria-label="Kernberg video interview about TFP"
-      className=" lg:w-[80lvw] w-lvw mb-[20dvh] p-5 md:p-10 lg:mt-30 mt-20 bg-amber-100/80 overflow-hidden border-yellow-950/50 border-b-8 border-t-8  flex flex-col items-center"
+      className=" lg:w-[80lvw] w-lvw mb-[20dvh] p-5 md:p-10 lg:mt-30 mt-20 bg-amber-100/90 overflow-hidden border-yellow-950/50 border-b-8 border-t-8  flex flex-col items-center"
     >
       <div className="w-full flex flex-col items-center overflow-hidden">
         <h3

@@ -50,7 +50,7 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
         <div className="sectionInnerWrapper">
           <h3 className="footerHeadding">Контакты</h3>
 
-          <address className="footerAddress">
+          <address className="footerAddress pb-2">
             {/* Телефон */}
             <a
               href="tel:+79097312044"
@@ -67,7 +67,7 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
 
             {/* Telegram */}
             <a
-              href="https://t.me/username"
+              href="https://t.me/MaximFedoryshin"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Написать в Telegram"
@@ -76,22 +76,6 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
               <img
                 src="./icons/telegram-svgrepo-com.svg"
                 alt="Telegram"
-                className="footerButtonImg"
-                loading="lazy"
-              />
-            </a>
-
-            {/* WhatsApp */}
-            <a
-              href="https://wa.me/79097312044"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Написать в WhatsApp"
-              className="footerButtonHover"
-            >
-              <img
-                src="./icons/whatsapp-svgrepo-com.svg"
-                alt="WhatsApp"
                 className="footerButtonImg"
                 loading="lazy"
               />
@@ -115,7 +99,7 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
 
             {/* Max (ссылка на сайт или портфолио) */}
             <a
-              href="https://max.ru/id5517874"
+              href="https://max.ru/u/f9LHodD0cOLD_Aq_tO4UcSGoNgnB9GIPVVkzl1yjpcJapgAb-me9zbwcRAo"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Перейти на сайт Maх"
