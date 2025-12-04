@@ -61,14 +61,6 @@ const AboutMe = ({
           className={`w-full lg:w-2/3 p-5 text-green-50 transition-all duration-500  bg-[#21221a]/80 ${
             !textField.isVisible && "translate-x-[50vw] opacity-0 "
           }`}
-          style={{
-            boxShadow: `
-            inset 0 4px 100px rgba(0, 0, 0, 0.4),
-            inset 0 -4px 100px rgba(0, 0, 0, 0.4),
-            inset 4px 0 100px rgba(0, 0, 0, 0.4),
-            inset -4px 0 100px rgba(0, 0, 0, 0.4)
-            `,
-          }}
         >
           <div className="flex h-full flex-col justify-between">
             <div className="pt-10">
@@ -238,3 +230,16 @@ const AboutMe = ({
 export default AboutMe;
 
 //aboutMeRef.current
+
+/*
+
+style={{
+            boxShadow: `
+            inset 0 4px 100px rgba(0, 0, 0, 0.4),
+            inset 0 -4px 100px rgba(0, 0, 0, 0.4),
+            inset 4px 0 100px rgba(0, 0, 0, 0.4),
+            inset -4px 0 100px rgba(0, 0, 0, 0.4)
+            `,
+          }}
+
+*/
