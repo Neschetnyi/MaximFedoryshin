@@ -24,7 +24,7 @@ const AboutMe = ({
     <section ref={aboutMe} id="aboutMe" aria-label="about me">
       <div
         ref={textField.ref}
-        className=" flex  flex-wrap flex-col max-lg:items-center lg:flex-row overflow-hidden backdrop-blur-2xl bg-black/10 min-h-dvh border-b-8 border-b-yellow-950/50"
+        className=" flex  flex-wrap flex-col max-lg:items-center lg:flex-row overflow-hidden  bg-[#8c7c62]/80 min-h-dvh border-b-8 border-b-yellow-950/50"
       >
         <figure
           className={`MaximFoto  w-1/2 lg:w-1/3 lg:pt-15 p-5 flex flex-col  justify-baseline items-center overflow-hidden  `}
@@ -58,11 +58,10 @@ const AboutMe = ({
         </figure>
 
         <div
-          className={`w-full lg:w-2/3 p-5 text-green-50 transition-all duration-500 ${
+          className={`w-full lg:w-2/3 p-5 text-green-50 transition-all duration-500  bg-[#21221a]/80 ${
             !textField.isVisible && "translate-x-[50vw] opacity-0 "
           }`}
           style={{
-            backgroundColor: "rgba(0, 0, 0, 0.2)",
             boxShadow: `
             inset 0 4px 100px rgba(0, 0, 0, 0.4),
             inset 0 -4px 100px rgba(0, 0, 0, 0.4),
