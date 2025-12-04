@@ -88,7 +88,7 @@ const Vision = () => {
   }, []);
 
   return (
-    <section className="h-[calc(100dvh-280px)] flex  p-6   w-full ">
+    <section className="h-30 flex  p-6   w-full ">
       <div className="w-full flex items-baseline justify-center ">
         <p
           ref={textRef}
