@@ -77,6 +77,7 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
   const toggleMenu = () => {
     if (!isVisibleMobile) {
       // закрываем
+      document.body.classList.remove("menu-open");
       setIsVisibleMobile(true);
       setTimeout(() => {
         scrollYref.current = 0;
@@ -87,10 +88,12 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
 
     // открываем
     if (window.scrollY > 0) {
+      document.body.classList.add("menu-open");
       setIsScroll(true);
       scrollYref.current = window.scrollY;
       setTimeout(() => setIsVisibleMobile(false), 350);
     } else {
+      document.body.classList.add("menu-open");
       setIsVisibleMobile(false);
     }
   };
@@ -109,7 +112,7 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
       <nav
         style={navStyle}
         className={`lg:hidden 
-          w-lvw z-20 bg-white/30 backdrop-blur-md
+          w-lvw z-20 bg-white/10 backdrop-blur-2xl 
           flex flex-col items-center will-change-transform
           
           ${
@@ -224,3 +227,5 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
 };
 
 export default MobileNavigation;
+
+//  bg-gray-300/95 ${/* g-gray-300/95 */}

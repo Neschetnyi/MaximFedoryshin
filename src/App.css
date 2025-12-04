@@ -88,3 +88,7 @@
   @apply w-[100lvw]
   lg:w-[80lvw];
 }
+
+body.menu-open .transitionAll {
+  transition: none !important;
+}
