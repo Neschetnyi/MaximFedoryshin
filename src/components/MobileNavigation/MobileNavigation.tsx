@@ -110,7 +110,7 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
         style={navStyle}
         className={`lg:hidden 
           w-lvw z-20 bg-white/30 backdrop-blur-md
-          flex flex-col items-center
+          flex flex-col items-center will-change-transform
           
           ${
             noAnim

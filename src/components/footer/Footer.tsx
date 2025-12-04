@@ -1,18 +1,21 @@
 import { useEffect, useRef } from "react";
 
 import "./footer.css";
+import Separator from "../main/separator/Separator";
 
 const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
   const footerRef = useRef<HTMLDivElement | null>(null);
+  const figureRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
     const footer = footerRef.current;
+
     if (!footer) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         const ratio = entry.intersectionRatio;
-        const shift = ratio * 200;
+        const shift = ratio * 180;
         setBgOffset(shift);
       },
       {
@@ -25,24 +28,26 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
   }, [setBgOffset]);
 
   return (
-    <footer ref={footerRef} className="footer">
+    <footer className="footer">
       <section aria-label="Контактная информация" className="footerSection">
+        <figure className="figure">
+          <picture>
+            <source
+              media="(min-width:1024px)"
+              srcSet="./maxFoto/maxFotoFooterDesktop.webp"
+              type="image/webp"
+            />
+            <img
+              ref={figureRef}
+              src="./maxFoto/maxFotoFooterMobile.webp"
+              alt="Психолог"
+              className="footerImg"
+              loading="lazy"
+            />
+          </picture>
+        </figure>
+        <Separator />
         <div className="sectionInnerWrapper">
-          <figure className="figure">
-            <picture>
-              <source
-                media="(min-width:1024px)"
-                srcSet="./maxFoto/maxFotoFooterDesktop.webp"
-                type="image/webp"
-              />
-              <img
-                src="./maxFoto/maxFotoFooterMobile.webp"
-                alt="Психолог"
-                className="footerImg"
-                loading="lazy"
-              />
-            </picture>
-          </figure>
           <h3 className="footerHeadding">Контакты</h3>
 
           <address className="footerAddress">
@@ -125,11 +130,12 @@ const Footer = ({ setBgOffset }: { setBgOffset: (x: number) => void }) => {
             </a>
           </address>
 
-          <p className="workStyle">
+          <p className="workStyle" ref={footerRef}>
             * На данный момент работаю только в онлайн-формате
           </p>
         </div>
       </section>
+      <div className="w-px h-px"></div>
     </footer>
   );
 };

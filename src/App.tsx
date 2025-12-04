@@ -66,8 +66,6 @@ const App = () => {
         <Main refs={refs} />
         {/* 🔹 футер с ref для наблюдения */}
         <div className="footerWrapper">
-          <Separator />
-
           <Footer setBgOffset={setBgOffset} />
         </div>
       </div>
