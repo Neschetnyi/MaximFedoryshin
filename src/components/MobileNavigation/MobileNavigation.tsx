@@ -77,7 +77,7 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
   const toggleMenu = () => {
     if (!isVisibleMobile) {
       // закрываем
-      document.body.classList.remove("menu-open");
+
       setIsVisibleMobile(true);
       setTimeout(() => {
         scrollYref.current = 0;
@@ -88,12 +88,10 @@ const MobileNavigation = ({ refs }: { refs: refsType }) => {
 
     // открываем
     if (window.scrollY > 0) {
-      document.body.classList.add("menu-open");
       setIsScroll(true);
       scrollYref.current = window.scrollY;
       setTimeout(() => setIsVisibleMobile(false), 350);
     } else {
-      document.body.classList.add("menu-open");
       setIsVisibleMobile(false);
     }
   };

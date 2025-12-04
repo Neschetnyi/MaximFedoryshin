@@ -4,10 +4,10 @@
   @apply w-full h-[calc(100dvh-42px)]   flex flex-col justify-between overflow-hidden;
 }
 .headerWrapper {
-  @apply flex flex-col pt-36
+  @apply flex flex-col pt-30
   max-tinym:landscape:pt-5
   landscape:pt-5
-  lg:landscape:pt-36;
+  lg:landscape:pt-15;
 }
 
 /*animations*/
@@ -59,7 +59,7 @@
 }
 
 .profession {
-  @apply text-green-50 self-end mr-20 transition duration-900 delay-1400 ease-out
+  @apply text-green-50 self-end mr-20 transition duration-900 delay-1400 ease-out text-shadow-green-950 text-shadow-2xs
   md:mr-30
   max-tinym:mr-10;
 }
