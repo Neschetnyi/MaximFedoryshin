@@ -10,7 +10,9 @@ export const useTextAnimation = ({
   const timer = useRef(100);
 
   useEffect(() => {
-    const elements = document.querySelectorAll(`.${classNameParam}`);
+    const elements = document.querySelectorAll(
+      `section#aboutMe .${classNameParam}`
+    );
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
